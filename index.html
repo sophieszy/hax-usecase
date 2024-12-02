@@ -5,7 +5,7 @@
   <base href="/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Demonstration for hax-dashboard">
+  <meta name="Description" content="Demonstration for hax-use-case-app">
 
   <style>
     :root,
@@ -19,13 +19,13 @@
       margin: var(--ddd-spacing-2);
     }
 
-    hax-dashboard {
+    hax-use-case-app {
       margin: var(--ddd-spacing-2);
       border: var(--ddd-border-md);
       border-radius: var(--ddd-radius-lg);
     }
 
-    hax-dashboard:hover {
+    hax-use-case-app:hover {
       box-shadow: var(--ddd-boxShadow-sm);
     }
 
@@ -40,18 +40,11 @@
 
 <body>
   <div id="demo">
-    <h1>hax-dashboard</h1>
-    <!-- this is going to do whatever the tag's defaults are -->
-    <h2>Default</h2>
-    <hax-dashboard></hax-dashboard>
-    <h2>Slot usage</h2>
-    <hax-dashboard data-accent="2" data-primary="17">
-      <div>Sample slot content</div>
-    </hax-dashboard>
-    <h2>Property usage</h2>
-    <hax-dashboard id="example" title="Sample property title"></hax-dashboard>
+
+    <hax-use-case-app></hax-use-case-app>
+
   </div>
-  <script type="module" src="./hax-dashboard.js"></script>
+  <script type="module" src="./hax-use-case-app.js"></script>
 
 </body>
 
