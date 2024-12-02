@@ -35,11 +35,14 @@ export class HaxDashboard extends DDDSuper(I18NMixin(LitElement)) {
     });
   }
 
-  // Lit reactive properties
+  // Lit reactive properties          have 2 arrays, have one clean data set that is the entire list of items and then filtered items will be the one that changes 
+  // each attribute should have a name and an icon, and then when you print 
   static get properties() {
     return {
       ...super.properties,
       title: { type: String },
+      description: { type: String },
+
     };
   }
 

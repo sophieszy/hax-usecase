@@ -1,0 +1,113 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "Blog",
+            "description": "Create a personal or professional blog with ease.",
+            "tags": [
+                "Writing",
+                "Personal"
+            ],
+            "image": "./images/blog.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=Blog"
+        },
+        {
+            "id": 2,
+            "name": "Portfolio",
+            "description": "Showcase your work and achievements.",
+            "tags": [
+                "Creative",
+                "Professional"
+            ],
+            "image": "./images/portfolio.png",
+            "dateAdded": 1635724800,
+            "demoLink": "https://hax.cloud?use-case=Portfolio"
+        },
+        {
+            "id": 3,
+            "name": "Course Site",
+            "description": "Build a professional course website for educators.",
+            "tags": [
+                "Education",
+                "Professional"
+            ],
+            "image": "./images/course-site.png",
+            "dateAdded": 1638316800,
+            "demoLink": "https://hax.cloud?use-case=CourseSite"
+        },
+        {
+            "id": 4,
+            "name": "Course Site",
+            "description": "Build a professional course website for educators.",
+            "tags": [
+                "Education",
+                "Professional"
+            ],
+            "image": "./images/course-site.png",
+            "dateAdded": 1638316800,
+            "demoLink": "https://hax.cloud?use-case=CourseSite"
+        },
+        {
+            "id": 5,
+            "name": "Course Site",
+            "description": "Build a professional course website for educators.",
+            "tags": [
+                "Education",
+                "Professional"
+            ],
+            "image": "./images/course-site.png",
+            "dateAdded": 1638316800,
+            "demoLink": "https://hax.cloud?use-case=CourseSite"
+        },
+        {
+            "id": 6,
+            "name": "Course Site",
+            "description": "Build a professional course website for educators.",
+            "tags": [
+                "Education",
+                "Professional"
+            ],
+            "image": "./images/course-site.png",
+            "dateAdded": 1638316800,
+            "demoLink": "https://hax.cloud?use-case=CourseSite"
+        },
+        {
+            "id": 7,
+            "name": "Course Site",
+            "description": "Build a professional course website for educators.",
+            "tags": [
+                "Education",
+                "Professional"
+            ],
+            "image": "./images/course-site.png",
+            "dateAdded": 1638316800,
+            "demoLink": "https://hax.cloud?use-case=CourseSite"
+        },
+        {
+            "id": 8,
+            "name": "Course Site",
+            "description": "Build a professional course website for educators.",
+            "tags": [
+                "Education",
+                "Professional"
+            ],
+            "image": "./images/course-site.png",
+            "dateAdded": 1638316800,
+            "demoLink": "https://hax.cloud?use-case=CourseSite"
+        },
+        {
+            "id": 9,
+            "name": "Course Site",
+            "description": "Build a professional course website for educators.",
+            "tags": [
+                "Education",
+                "Professional"
+            ],
+            "image": "./images/course-site.png",
+            "dateAdded": 1638316800,
+            "demoLink": "https://hax.cloud?use-case=CourseSite"
+        }
+    ]
+}
