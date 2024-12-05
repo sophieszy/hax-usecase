@@ -3,15 +3,31 @@
     "data": [
         {
             "id": 1,
-            "name": "Blog",
+            "name": "Personal Blog",
             "description": "Create a personal or professional blog with ease.",
             "tags": [
                 "Writing",
-                "Personal"
+                "Personal",
+                "Blog",
+                ""
             ],
             "image": "./images/blog.png",
             "dateAdded": 1633046400,
-            "demoLink": "https://hax.cloud?use-case=Blog"
+            "demoLink": "https://hax.cloud?use-case=Blog",
+            "attributes": [
+                {
+                    "icon": "icons:book",
+                    "label": "Reading level seven"
+                },
+                {
+                    "icon": "icons:bolt",
+                    "label": "Fast processing"
+                },
+                {
+                    "icon": "icons:security",
+                    "label": "Secure data"
+                }
+            ]
         },
         {
             "id": 2,
