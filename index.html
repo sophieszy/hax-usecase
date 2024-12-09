@@ -34,16 +34,101 @@
       background-color: var(--ddd-accent-2);
       color: var(--ddd-primary-17);
     }
+
+    .hax-logo {
+      width: 100px;
+    }
+
+    .top-bar {
+      background-color: var(--ddd-theme-default-limestoneGray);
+      /* Gray color */
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      align-items: center;
+      /* Vertically centers the items */
+    }
+
+    .top-bar div {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .merlin-site {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      /* Space between Merlin and the search bar */
+      flex-grow: 1;
+      /* Makes sure it takes the remaining space and centers in the middle */
+    }
+
+    .search-bar {
+      background-color: white;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      padding: 5px 10px;
+      display: flex;
+      gap: 5px;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+    }
+
+    .merlin {
+      margin: var(--ddd-spacing-2);
+      /* No margin, keeps it aligned with search bar */
+    }
+
+    .account {
+      font-weight: bold;
+      max-width: 100px;
+      margin-right: var(--ddd-spacing-4);
+    }
   </style>
+
   <title>hax-dashboard</title>
 </head>
 
 <body>
   <div id="demo">
+    <div class="top-bar">
+      <!-- Left section: Logo -->
+      <div>
+        <img class="hax-logo" src="https://haxtheweb.org/files/hax%20(1).png" alt="Description of image">
+      </div>
+
+      <!-- Center section: Merlin + Search Bar -->
+      <div class="merlin-site">
+        <p class="merlin">Merlin</p>
+        <div class="search-bar">
+          <input type="text" placeholder="Search sites">
+        </div>
+      </div>
+
+      <!-- Right section: Account name -->
+      <div class="account">
+        <span>Account Name</span>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div style="margin-top: 60px;">
+    </div>
 
     <hax-use-case-app></hax-use-case-app>
-
   </div>
+
   <script type="module" src="./hax-use-case-app.js"></script>
 
 </body>

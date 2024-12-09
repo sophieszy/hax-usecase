@@ -105,6 +105,16 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
       background-color: #ccc;
       cursor: not-allowed;
     }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column; /* Stack children vertically */
+      gap: 10px; 
+    }
+
+    .checkbox-group label {
+      display: block; /* Ensures each label occupies a full line */
+}
   `;
 
   // Handle filter changes
@@ -133,21 +143,21 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
           <h3>Filter by Tags</h3>
           
           <!-- Tag Filter -->
-          <div>
+          <div class="checkbox-group">
             <label>
-              <input type="checkbox" value="Design" @change="${this.updateFilter}"> Design
+              <input type="checkbox" value="Portfolio" @change="${this.updateFilter}"> Portfolio
             </label>
             <label>
-              <input type="checkbox" value="Tech" @change="${this.updateFilter}"> Tech
+              <input type="checkbox" value="Course" @change="${this.updateFilter}"> Course
             </label>
             <label>
-              <input type="checkbox" value="Art" @change="${this.updateFilter}"> Art
+              <input type="checkbox" value="Resume" @change="${this.updateFilter}"> Resume
             </label>
             <label>
-              <input type="checkbox" value="Writing" @change="${this.updateFilter}"> Writing
+              <input type="checkbox" value="Blog" @change="${this.updateFilter}"> Blog
             </label>
             <label>
-              <input type="checkbox" value="Personal" @change="${this.updateFilter}"> Personal
+              <input type="checkbox" value="Research Website" @change="${this.updateFilter}"> Research Website
             </label>
           </div>
         </div>
