@@ -17,8 +17,8 @@ export class UseCaseCard extends DDDSuper(I18NMixin(LitElement)) {
 
   static styles = css`
     .card {
-      background-color: white;
-      border: 1px solid #ccc;
+      background-color: var(--ddd-theme-default-white);
+      border: var(--ddd-border-lg) solid var(--ddd-theme-default-limestoneGray);
       border-radius: 12px;
       padding: 15px;
       text-align: center;
@@ -37,24 +37,28 @@ export class UseCaseCard extends DDDSuper(I18NMixin(LitElement)) {
 
     .active {
       border-color: blue;
-      box-shadow: 0 0 10px rgba(0, 0, 255, 0.2);
+      box-shadow: var(--ddd-boxShadow-lg) rgba(0, 0, 255, 0.2);
     }
 
     img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
+      margin: var(--ddd-spacing-2);
     }
 
     h3 {
-      margin: 12px 0 8px;
-      font-size: 1.4em;
+      margin: var(--ddd-spacing-4);
+      font-size: var(--ddd-font-size-sm);
+      color: var(--ddd-theme-default-potentialMidnight);
     }
 
     p {
       font-size: 0.9em;
-      color: #555;
+      color: var(--ddd-theme-default-potentialMidnight);
     }
+
+    
 
     .attributes {
       display: flex;
@@ -63,19 +67,19 @@ export class UseCaseCard extends DDDSuper(I18NMixin(LitElement)) {
 
     .attribute-circle {
   background-color: #eee;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   cursor: pointer;
+  border-radius: var(--ddd-radius-circle);
 }
 
 simple-icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   color: #555;  /* Customize icon color */
 }
 
@@ -100,6 +104,16 @@ simple-icon {
   opacity: 1;
 }
 
+.attributes-and-button {
+  display: flex; /* Enables flexbox */
+  flex-wrap: nowrap; /* Ensures content stays in one row */
+  align-items: center; /* Aligns items vertically */
+  justify-content: space-between; /* Spreads out the content */
+  gap: 15px; /* Space between attributes and the button */
+  width: 100%; /* Ensures the container spans the card's width */
+  margin-top: 15px; /* Adds spacing from the content above */
+}
+
     button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -122,7 +136,7 @@ simple-icon {
         <h3>${this.title}</h3>
         <p>${this.description}</p>
 
-        <!-- Attributes with Icons and Labels -->
+        <div class="attributes-and-button">
         <div class="attributes">
           ${this.attributes.map(attribute => html`
             <div class="attribute-circle">
@@ -136,6 +150,7 @@ simple-icon {
           ${this.active ? 'Selected' : 'Select'}
         </button>
       </div>
+          </div>
     `;
   }
 

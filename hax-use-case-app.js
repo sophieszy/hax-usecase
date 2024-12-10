@@ -15,6 +15,8 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
     filteredUseCases: { type: Array },
     activeUseCase: { type: Object },
     filters: { type: Object },  // Store the filters selected by the user
+    sortBy: { type: String }, // Sorting criterion
+
   };
 
   constructor() {
@@ -128,18 +130,36 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
     this.applyFilters();  // Reapply the filters
   }
 
-  // Apply filters based on selected tags
   applyFilters() {
-    this.filteredUseCases = this.useCases.filter(useCase => {
-      const matchesTags = this.filters.tags.length === 0 || this.filters.tags.every(tag => useCase.tags.includes(tag));
-      return matchesTags;
-    });
+    this.filteredUseCases = this.useCases
+      .filter(useCase => {
+        const matchesTags = this.filters.tags.length === 0 || this.filters.tags.every(tag => useCase.tags.includes(tag));
+        return matchesTags;
+      })
+      .sort((a, b) => {
+        if (this.sortBy === 'title') {
+          return a.name.localeCompare(b.name); // Sort alphabetically by title (name)
+        }
+        return 0; // No sorting if sortBy is not set
+      });
   }
+
+  updateSorting(criterion) {
+    this.sortBy = criterion;
+    this.applyFilters(); // Reapply filters and sorting
+  }
+
+
 
   render() {
     return html`
       <div class="container">
         <div class="sidebar">
+
+        <select @change="${e => this.updateSorting(e.target.value)}">
+  <option value="">None</option>
+  <option value="title">Title</option>
+</select>
           <h3>Filter by Tags</h3>
           
           <!-- Tag Filter -->
@@ -161,6 +181,9 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
             </label>
           </div>
         </div>
+
+        
+
 
         <div class="use-case-cards">
           ${this.filteredUseCases.map(useCase => html`
