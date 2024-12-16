@@ -156,10 +156,13 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
       <div class="container">
         <div class="sidebar">
 
+        <h3>Sorting</h3>
+
+
         <select @change="${e => this.updateSorting(e.target.value)}">
-  <option value="">None</option>
-  <option value="title">Title</option>
-</select>
+        <option value="">None</option>
+        <option value="title">Title</option>
+      </select>
           <h3>Filter by Tags</h3>
           
           <!-- Tag Filter -->

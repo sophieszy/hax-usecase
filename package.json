@@ -30,7 +30,8 @@
         "@haxtheweb/d-d-d": "^9.0.13",
         "@haxtheweb/i18n-manager": "^9.0.13",
         "@haxtheweb/simple-icon": "^9.0.22",
-        "lit": "^3.2.0"
+        "lit": "^3.2.0",
+        "rollup-plugin-copy": "^3.5.0"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.16.4",

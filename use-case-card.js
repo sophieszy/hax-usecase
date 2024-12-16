@@ -23,7 +23,7 @@ export class UseCaseCard extends DDDSuper(I18NMixin(LitElement)) {
       padding: 15px;
       text-align: center;
       width: 280px;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--ddd-boxShadow-xl);
       cursor: pointer;
       transition: border-color 0.3s ease, transform 0.3s ease;
       display: flex;
@@ -37,7 +37,7 @@ export class UseCaseCard extends DDDSuper(I18NMixin(LitElement)) {
 
     .active {
       border-color: blue;
-      box-shadow: var(--ddd-boxShadow-lg) rgba(0, 0, 255, 0.2);
+      box-shadow: var(--ddd-boxShadow-lg);
     }
 
     img {
