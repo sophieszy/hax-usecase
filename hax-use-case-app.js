@@ -31,7 +31,7 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
   connectedCallback() {
     super.connectedCallback();
     // Fetch the JSON file
-    fetch(new URL('../lib/use-case-data.json', import.meta.url).href)  // Replace with the actual path to your JSON file
+    fetch(new URL('./lib/use-case-data.json', import.meta.url).href)  // Replace with the actual path to your JSON file
       .then(response => {
         if (!response.ok) {
           throw new Error(`Failed to load use cases: ${response.statusText}`);
