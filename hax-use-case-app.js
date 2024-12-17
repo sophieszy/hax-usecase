@@ -31,7 +31,7 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
   connectedCallback() {
     super.connectedCallback();
     // Fetch the JSON file
-    fetch(new URL('./lib/use-case-data.json', import.meta.url).href)  // Replace with the actual path to your JSON file
+    fetch(new URL('./lib/use-case-data.json', import.meta.url).href)  // Path to the JSON file
       .then(response => {
         if (!response.ok) {
           throw new Error(`Failed to load use cases: ${response.statusText}`);
@@ -39,7 +39,14 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
         return response.json(); // Parse the JSON response
       })
       .then(data => {
-        this.useCases = data.data; // Assuming your JSON structure has a "data" key
+        // Resolve the image URLs to be relative to the public directory for Vercel deployment
+        this.useCases = data.data.map(useCase => {
+          // Update the image URL to be compatible with Vercel's public directory structure
+          useCase.image = useCase.image ? `/lib/${useCase.image.split('/').pop()}` : '';
+
+          return useCase;
+        });
+
         this.filteredUseCases = [...this.useCases]; // Initialize filtered use cases
       })
       .catch(error => {
@@ -48,7 +55,6 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
         this.filteredUseCases = [];
       });
   }
-
 
 
   static styles = css`
