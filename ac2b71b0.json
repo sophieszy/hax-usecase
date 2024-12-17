@@ -37,7 +37,7 @@
                 "portfolio",
                 "academic"
             ],
-            "image": "../lib/research-project.png",
+            "image": "./lib/research-project.png",
             "dateAdded": 1633046400,
             "demoLink": "https://hax.cloud?use-case=ResearchWebsite",
             "attributes": [
