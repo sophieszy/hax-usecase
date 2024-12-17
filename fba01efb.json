@@ -1,0 +1,248 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "Personal Blog",
+            "description": "Create a personal or professional blog with ease.",
+            "tags": [
+                "blog",
+                "personal",
+                "writing"
+            ],
+            "image": "./images/blog.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=PersonalBlog",
+            "attributes": [
+                {
+                    "icon": "icons:book",
+                    "label": "Reading level seven"
+                },
+                {
+                    "icon": "icons:bolt",
+                    "label": "Fast processing"
+                },
+                {
+                    "icon": "icons:security",
+                    "label": "Secure data"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Research Website",
+            "description": "Showcase academic or research projects professionally.",
+            "tags": [
+                "research website",
+                "portfolio",
+                "academic"
+            ],
+            "image": "../lib/research-project.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=ResearchWebsite",
+            "attributes": [
+                {
+                    "icon": "icons:insights",
+                    "label": "Research-focused"
+                },
+                {
+                    "icon": "icons:search",
+                    "label": "Enhanced discoverability"
+                },
+                {
+                    "icon": "icons:lock",
+                    "label": "Privacy assured"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Portfolio Site",
+            "description": "Present your work in an elegant and professional way.",
+            "tags": [
+                "portfolio",
+                "personal",
+                "design"
+            ],
+            "image": "./images/portfolio.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=PortfolioSite",
+            "attributes": [
+                {
+                    "icon": "icons:brush",
+                    "label": "Customizable design"
+                },
+                {
+                    "icon": "icons:bolt",
+                    "label": "Responsive layouts"
+                },
+                {
+                    "icon": "icons:visibility",
+                    "label": "Showcase visibility"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Online Resume",
+            "description": "Build an interactive and visually appealing resume.",
+            "tags": [
+                "resume",
+                "professional",
+                "job applications"
+            ],
+            "image": "./images/resume.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=OnlineResume",
+            "attributes": [
+                {
+                    "icon": "icons:work",
+                    "label": "Job-ready templates"
+                },
+                {
+                    "icon": "icons:print",
+                    "label": "Printable formats"
+                },
+                {
+                    "icon": "icons:device-hub",
+                    "label": "Linked profile integration"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Course Platform",
+            "description": "Create and deliver engaging online courses.",
+            "tags": [
+                "course",
+                "teaching",
+                "education"
+            ],
+            "image": "./images/course.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=CoursePlatform",
+            "attributes": [
+                {
+                    "icon": "icons:school",
+                    "label": "Education-focused"
+                },
+                {
+                    "icon": "icons:video-library",
+                    "label": "Multimedia integration"
+                },
+                {
+                    "icon": "icons:assignment",
+                    "label": "Progress tracking"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Team Collaboration Hub",
+            "description": "Facilitate collaboration with a streamlined team workspace.",
+            "tags": [
+                "collaboration",
+                "teamwork",
+                "research website"
+            ],
+            "image": "./images/team.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=TeamCollaborationHub",
+            "attributes": [
+                {
+                    "icon": "icons:group",
+                    "label": "Team-oriented design"
+                },
+                {
+                    "icon": "icons:cloud",
+                    "label": "Cloud access"
+                },
+                {
+                    "icon": "icons:security",
+                    "label": "Data encryption"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Content Management System",
+            "description": "Organize and manage digital content effectively.",
+            "tags": [
+                "blog",
+                "portfolio",
+                "research website"
+            ],
+            "image": "./images/cms.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=ContentManagementSystem",
+            "attributes": [
+                {
+                    "icon": "icons:dashboard",
+                    "label": "Dashboard control"
+                },
+                {
+                    "icon": "icons:settings",
+                    "label": "Flexible configurations"
+                },
+                {
+                    "icon": "icons:layers",
+                    "label": "Layered structure"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Event Promotion Page",
+            "description": "Promote events with dynamic pages and invitations.",
+            "tags": [
+                "events",
+                "portfolio",
+                "personal"
+            ],
+            "image": "./images/event.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=EventPromotionPage",
+            "attributes": [
+                {
+                    "icon": "icons:calendar-today",
+                    "label": "Event scheduling"
+                },
+                {
+                    "icon": "icons:mail",
+                    "label": "Email invites"
+                },
+                {
+                    "icon": "icons:share",
+                    "label": "Social media integration"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Community Forum",
+            "description": "Engage with audiences through an interactive forum.",
+            "tags": [
+                "blog",
+                "discussion",
+                "course"
+            ],
+            "image": "./images/forum.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=CommunityForum",
+            "attributes": [
+                {
+                    "icon": "icons:chat",
+                    "label": "Live discussions"
+                },
+                {
+                    "icon": "icons:group",
+                    "label": "Community-centric"
+                },
+                {
+                    "icon": "icons:notifications",
+                    "label": "Real-time updates"
+                }
+            ]
+        }
+    ]
+}
