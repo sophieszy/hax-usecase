@@ -19,11 +19,11 @@
                     "label": "Reading level seven"
                 },
                 {
-                    "icon": "icons:bolt",
-                    "label": "Fast processing"
+                    "icon": "icons:settings",
+                    "label": "Customizable Layout"
                 },
                 {
-                    "icon": "icons:security",
+                    "icon": "icons:lock-outline",
                     "label": "Secure data"
                 }
             ]
@@ -37,21 +37,21 @@
                 "portfolio",
                 "academic"
             ],
-            "image": "/public/research-project.png",
+            "image": "./lib/research-project.png",
             "dateAdded": 1633046400,
             "demoLink": "https://hax.cloud?use-case=ResearchWebsite",
             "attributes": [
                 {
-                    "icon": "icons:insights",
-                    "label": "Research-focused"
+                    "icon": "icons:lightbulb-outline",
+                    "label": "Academic-focused"
                 },
                 {
-                    "icon": "icons:search",
-                    "label": "Enhanced discoverability"
+                    "icon": "icons:arrow-back",
+                    "label": "Interactive Presentations"
                 },
                 {
-                    "icon": "icons:lock",
-                    "label": "Privacy assured"
+                    "icon": "icons:fingerprint",
+                    "label": "Privacy Assured"
                 }
             ]
         },
@@ -69,16 +69,16 @@
             "demoLink": "https://hax.cloud?use-case=PortfolioSite",
             "attributes": [
                 {
-                    "icon": "icons:brush",
-                    "label": "Customizable design"
+                    "icon": "icons:settings",
+                    "label": "Customizable Layout"
                 },
                 {
-                    "icon": "icons:bolt",
-                    "label": "Responsive layouts"
+                    "icon": "icons:file-download",
+                    "label": "Downloadable Content"
                 },
                 {
                     "icon": "icons:visibility",
-                    "label": "Showcase visibility"
+                    "label": "Showcase Visibility"
                 }
             ]
         },
@@ -97,15 +97,15 @@
             "attributes": [
                 {
                     "icon": "icons:work",
-                    "label": "Job-ready templates"
+                    "label": "Job-Ready Templates"
                 },
                 {
                     "icon": "icons:print",
-                    "label": "Printable formats"
+                    "label": "Printable Formats"
                 },
                 {
-                    "icon": "icons:device-hub",
-                    "label": "Linked profile integration"
+                    "icon": "icons:link",
+                    "label": "Linked Profile Integration"
                 }
             ]
         },
@@ -123,16 +123,16 @@
             "demoLink": "https://hax.cloud?use-case=CoursePlatform",
             "attributes": [
                 {
-                    "icon": "icons:school",
-                    "label": "Education-focused"
+                    "icon": "icons:assignment-turned-in",
+                    "label": "Education-Focused"
                 },
                 {
-                    "icon": "icons:video-library",
-                    "label": "Multimedia integration"
+                    "icon": "icons:camera-enhance",
+                    "label": "Multimedia Integration"
                 },
                 {
                     "icon": "icons:assignment",
-                    "label": "Progress tracking"
+                    "label": "Progress Tracking"
                 }
             ]
         },
@@ -150,16 +150,16 @@
             "demoLink": "https://hax.cloud?use-case=TeamCollaborationHub",
             "attributes": [
                 {
-                    "icon": "icons:group",
-                    "label": "Team-oriented design"
+                    "icon": "icons:group-work",
+                    "label": "Team-Oriented Design"
                 },
                 {
                     "icon": "icons:cloud",
-                    "label": "Cloud access"
+                    "label": "Cloud Access"
                 },
                 {
-                    "icon": "icons:security",
-                    "label": "Data encryption"
+                    "icon": "icons:lock",
+                    "label": "Data Encryption"
                 }
             ]
         },
@@ -178,15 +178,15 @@
             "attributes": [
                 {
                     "icon": "icons:dashboard",
-                    "label": "Dashboard control"
+                    "label": "Dashboard Control"
                 },
                 {
                     "icon": "icons:settings",
-                    "label": "Flexible configurations"
+                    "label": "Flexible Configurations"
                 },
                 {
-                    "icon": "icons:layers",
-                    "label": "Layered structure"
+                    "icon": "icons:build",
+                    "label": "Layered Structure"
                 }
             ]
         },
@@ -204,16 +204,16 @@
             "demoLink": "https://hax.cloud?use-case=EventPromotionPage",
             "attributes": [
                 {
-                    "icon": "icons:calendar-today",
-                    "label": "Event scheduling"
+                    "icon": "icons:schedule",
+                    "label": "Event Scheduling"
                 },
                 {
                     "icon": "icons:mail",
-                    "label": "Email invites"
+                    "label": "Email Invites"
                 },
                 {
-                    "icon": "icons:share",
-                    "label": "Social media integration"
+                    "icon": "icons:perm-media",
+                    "label": "Social Media Integration"
                 }
             ]
         },
@@ -231,16 +231,16 @@
             "demoLink": "https://hax.cloud?use-case=CommunityForum",
             "attributes": [
                 {
-                    "icon": "icons:chat",
-                    "label": "Live discussions"
+                    "icon": "icons:speaker-notes",
+                    "label": "Live Discussions"
                 },
                 {
-                    "icon": "icons:group",
-                    "label": "Community-centric"
+                    "icon": "icons:group-work",
+                    "label": "Community-Centric"
                 },
                 {
-                    "icon": "icons:notifications",
-                    "label": "Real-time updates"
+                    "icon": "icons:inbox",
+                    "label": "Real-Time Updates"
                 }
             ]
         }

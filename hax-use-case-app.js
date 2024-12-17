@@ -30,25 +30,32 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
 
   connectedCallback() {
     super.connectedCallback();
-    // Fetch the JSON file
-    fetch(new URL('./lib/use-case-data.json', import.meta.url).href)  // Path to the JSON file
+    fetch(new URL('./lib/use-case-data.json', import.meta.url).href)
       .then(response => {
         if (!response.ok) {
           throw new Error(`Failed to load use cases: ${response.statusText}`);
         }
-        return response.json(); // Parse the JSON response
+        return response.json();
       })
       .then(data => {
-        this.useCases = data.data;
-
-        this.filteredUseCases = [...this.useCases]; // Initialize filtered use cases
+        // Convert relative image paths to absolute URLs
+        this.useCases = data.data.map(useCase => {
+          return {
+            ...useCase,
+            image: useCase.image
+              ? new URL(useCase.image, import.meta.url).href
+              : '' // Resolve to an absolute URL
+          };
+        });
+        this.filteredUseCases = [...this.useCases];
       })
       .catch(error => {
         console.error('Error fetching use cases:', error);
-        this.useCases = []; // Fallback to an empty array on error
+        this.useCases = [];
         this.filteredUseCases = [];
       });
   }
+
 
 
 
