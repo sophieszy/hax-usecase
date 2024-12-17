@@ -43,7 +43,7 @@
         {
             "tag": "hax-dashboard",
             "properties": {
-              "title": "Sample property title"
+                "title": "Sample property title"
             },
             "content": ""
         }
