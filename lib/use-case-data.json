@@ -6,14 +6,13 @@
             "name": "Personal Blog",
             "description": "Create a personal or professional blog with ease.",
             "tags": [
-                "Writing",
-                "Personal",
-                "Blog",
-                ""
+                "blog",
+                "personal",
+                "writing"
             ],
             "image": "./images/blog.png",
             "dateAdded": 1633046400,
-            "demoLink": "https://hax.cloud?use-case=Blog",
+            "demoLink": "https://hax.cloud?use-case=PersonalBlog",
             "attributes": [
                 {
                     "icon": "icons:book",
@@ -31,99 +30,219 @@
         },
         {
             "id": 2,
-            "name": "Portfolio",
-            "description": "Showcase your work and achievements.",
+            "name": "Research Website",
+            "description": "Showcase academic or research projects professionally.",
             "tags": [
-                "Creative",
-                "Professional"
+                "research website",
+                "portfolio",
+                "academic"
             ],
-            "image": "./images/portfolio.png",
-            "dateAdded": 1635724800,
-            "demoLink": "https://hax.cloud?use-case=Portfolio"
+            "image": "../lib/research-project.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=ResearchWebsite",
+            "attributes": [
+                {
+                    "icon": "icons:insights",
+                    "label": "Research-focused"
+                },
+                {
+                    "icon": "icons:search",
+                    "label": "Enhanced discoverability"
+                },
+                {
+                    "icon": "icons:lock",
+                    "label": "Privacy assured"
+                }
+            ]
         },
         {
             "id": 3,
-            "name": "Course Site",
-            "description": "Build a professional course website for educators.",
+            "name": "Portfolio Site",
+            "description": "Present your work in an elegant and professional way.",
             "tags": [
-                "Education",
-                "Professional"
+                "portfolio",
+                "personal",
+                "design"
             ],
-            "image": "./images/course-site.png",
-            "dateAdded": 1638316800,
-            "demoLink": "https://hax.cloud?use-case=CourseSite"
+            "image": "./images/portfolio.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=PortfolioSite",
+            "attributes": [
+                {
+                    "icon": "icons:brush",
+                    "label": "Customizable design"
+                },
+                {
+                    "icon": "icons:bolt",
+                    "label": "Responsive layouts"
+                },
+                {
+                    "icon": "icons:visibility",
+                    "label": "Showcase visibility"
+                }
+            ]
         },
         {
             "id": 4,
-            "name": "Course Site",
-            "description": "Build a professional course website for educators.",
+            "name": "Online Resume",
+            "description": "Build an interactive and visually appealing resume.",
             "tags": [
-                "Education",
-                "Professional"
+                "resume",
+                "professional",
+                "job applications"
             ],
-            "image": "./images/course-site.png",
-            "dateAdded": 1638316800,
-            "demoLink": "https://hax.cloud?use-case=CourseSite"
+            "image": "./images/resume.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=OnlineResume",
+            "attributes": [
+                {
+                    "icon": "icons:work",
+                    "label": "Job-ready templates"
+                },
+                {
+                    "icon": "icons:print",
+                    "label": "Printable formats"
+                },
+                {
+                    "icon": "icons:device-hub",
+                    "label": "Linked profile integration"
+                }
+            ]
         },
         {
             "id": 5,
-            "name": "Course Site",
-            "description": "Build a professional course website for educators.",
+            "name": "Course Platform",
+            "description": "Create and deliver engaging online courses.",
             "tags": [
-                "Education",
-                "Professional"
+                "course",
+                "teaching",
+                "education"
             ],
-            "image": "./images/course-site.png",
-            "dateAdded": 1638316800,
-            "demoLink": "https://hax.cloud?use-case=CourseSite"
+            "image": "./images/course.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=CoursePlatform",
+            "attributes": [
+                {
+                    "icon": "icons:school",
+                    "label": "Education-focused"
+                },
+                {
+                    "icon": "icons:video-library",
+                    "label": "Multimedia integration"
+                },
+                {
+                    "icon": "icons:assignment",
+                    "label": "Progress tracking"
+                }
+            ]
         },
         {
             "id": 6,
-            "name": "Course Site",
-            "description": "Build a professional course website for educators.",
+            "name": "Team Collaboration Hub",
+            "description": "Facilitate collaboration with a streamlined team workspace.",
             "tags": [
-                "Education",
-                "Professional"
+                "collaboration",
+                "teamwork",
+                "research website"
             ],
-            "image": "./images/course-site.png",
-            "dateAdded": 1638316800,
-            "demoLink": "https://hax.cloud?use-case=CourseSite"
+            "image": "./images/team.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=TeamCollaborationHub",
+            "attributes": [
+                {
+                    "icon": "icons:group",
+                    "label": "Team-oriented design"
+                },
+                {
+                    "icon": "icons:cloud",
+                    "label": "Cloud access"
+                },
+                {
+                    "icon": "icons:security",
+                    "label": "Data encryption"
+                }
+            ]
         },
         {
             "id": 7,
-            "name": "Course Site",
-            "description": "Build a professional course website for educators.",
+            "name": "Content Management System",
+            "description": "Organize and manage digital content effectively.",
             "tags": [
-                "Education",
-                "Professional"
+                "blog",
+                "portfolio",
+                "research website"
             ],
-            "image": "./images/course-site.png",
-            "dateAdded": 1638316800,
-            "demoLink": "https://hax.cloud?use-case=CourseSite"
+            "image": "./images/cms.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=ContentManagementSystem",
+            "attributes": [
+                {
+                    "icon": "icons:dashboard",
+                    "label": "Dashboard control"
+                },
+                {
+                    "icon": "icons:settings",
+                    "label": "Flexible configurations"
+                },
+                {
+                    "icon": "icons:layers",
+                    "label": "Layered structure"
+                }
+            ]
         },
         {
             "id": 8,
-            "name": "Course Site",
-            "description": "Build a professional course website for educators.",
+            "name": "Event Promotion Page",
+            "description": "Promote events with dynamic pages and invitations.",
             "tags": [
-                "Education",
-                "Professional"
+                "events",
+                "portfolio",
+                "personal"
             ],
-            "image": "./images/course-site.png",
-            "dateAdded": 1638316800,
-            "demoLink": "https://hax.cloud?use-case=CourseSite"
+            "image": "./images/event.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=EventPromotionPage",
+            "attributes": [
+                {
+                    "icon": "icons:calendar-today",
+                    "label": "Event scheduling"
+                },
+                {
+                    "icon": "icons:mail",
+                    "label": "Email invites"
+                },
+                {
+                    "icon": "icons:share",
+                    "label": "Social media integration"
+                }
+            ]
         },
         {
             "id": 9,
-            "name": "Course Site",
-            "description": "Build a professional course website for educators.",
+            "name": "Community Forum",
+            "description": "Engage with audiences through an interactive forum.",
             "tags": [
-                "Education",
-                "Professional"
+                "blog",
+                "discussion",
+                "course"
             ],
-            "image": "./images/course-site.png",
-            "dateAdded": 1638316800,
-            "demoLink": "https://hax.cloud?use-case=CourseSite"
+            "image": "./images/forum.png",
+            "dateAdded": 1633046400,
+            "demoLink": "https://hax.cloud?use-case=CommunityForum",
+            "attributes": [
+                {
+                    "icon": "icons:chat",
+                    "label": "Live discussions"
+                },
+                {
+                    "icon": "icons:group",
+                    "label": "Community-centric"
+                },
+                {
+                    "icon": "icons:notifications",
+                    "label": "Real-time updates"
+                }
+            ]
         }
     ]
 }

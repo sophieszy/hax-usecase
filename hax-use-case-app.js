@@ -16,7 +16,6 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
     activeUseCase: { type: Object },
     filters: { type: Object },  // Store the filters selected by the user
     sortBy: { type: String }, // Sorting criterion
-
   };
 
   constructor() {
@@ -31,59 +30,43 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
 
   connectedCallback() {
     super.connectedCallback();
-    // Hardcode some use cases for now
-    this.useCases = [
-      {
-        id: 1,
-        name: 'Course',
-        description: 'Unlock your creativity and technical skills by designing a dynamic website for your course.',
-        image: 'https://via.placeholder.com/150',
-        tags: ['Design', 'Tech'],
-        attributes: [
-          { icon: 'info', label: 'Reading level seven' },
-          { icon: 'bolt', label: 'Fast processing' },
-          { icon: 'security', label: 'Secure data' }
-        ]
-      },
-      {
-        id: 2,
-        name: 'Portfolio',
-        description: 'Showcase your work in a sleek portfolio website.',
-        image: 'https://via.placeholder.com/150',
-        tags: ['Design', 'Art'],
-        attributes: [
-          { icon: 'icons:palette', label: 'Creative design' },
-          { icon: 'icons:visibility', label: 'Public access' }
-        ]
-      },
-      {
-        id: 3,
-        name: 'Blog',
-        description: 'Create a personal or professional blog with ease.',
-        image: 'https://via.placeholder.com/150',
-        tags: ['Writing', 'Personal'],
-        attributes: [
-          { icon: 'icons:book', label: 'Reading level five' },
-          { icon: 'icons:bolt', label: 'Fast processing' },
-          { icon: 'icons:security', label: 'Secure data' }
-        ]
-      }
-    ];
-    this.filteredUseCases = [...this.useCases];  // Initialize with all use cases
+    // Fetch the JSON file
+    fetch(new URL('../lib/use-case-data.json', import.meta.url).href)  // Replace with the actual path to your JSON file
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed to load use cases: ${response.statusText}`);
+        }
+        return response.json(); // Parse the JSON response
+      })
+      .then(data => {
+        this.useCases = data.data; // Assuming your JSON structure has a "data" key
+        this.filteredUseCases = [...this.useCases]; // Initialize filtered use cases
+      })
+      .catch(error => {
+        console.error('Error fetching use cases:', error);
+        this.useCases = []; // Fallback to an empty array on error
+        this.filteredUseCases = [];
+      });
   }
 
   static styles = css`
     .container {
       display: flex;
-      padding: 20px;
+      align-items: flex-start; /* Align items to top */
+      gap: 20px;
     }
 
     .sidebar {
-      width: 200px;
-      margin-right: 20px;
+      width: 300px;
+      height: 100vh; /* Sidebar takes full viewport height */
       padding: 10px;
       background-color: #f4f4f4;
       border-radius: 8px;
+      flex-shrink: 0; /* Prevent sidebar from shrinking */
+      overflow-y: auto; /* Handle overflow */
+      display: flex;
+      flex-direction: column; /* Ensure items are stacked vertically */
+      justify-content: flex-start;
     }
 
     .use-case-cards {
@@ -116,7 +99,17 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
 
     .checkbox-group label {
       display: block; /* Ensures each label occupies a full line */
-}
+    }
+
+    .reset-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
   `;
 
   // Handle filter changes
@@ -130,6 +123,7 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
     this.applyFilters();  // Reapply the filters
   }
 
+  // Apply filters and sorting
   applyFilters() {
     this.filteredUseCases = this.useCases
       .filter(useCase => {
@@ -144,49 +138,66 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
       });
   }
 
+  // Update sorting criterion
   updateSorting(criterion) {
     this.sortBy = criterion;
     this.applyFilters(); // Reapply filters and sorting
   }
 
+  // Reset all filters
+  resetFilters() {
+    this.filters.tags = [];  // Clear selected tags
+    this.applyFilters();  // Reapply filters (which will reset to all use cases)
 
+    // Uncheck all checkboxes in the filter section
+    const checkboxes = this.shadowRoot.querySelectorAll('.checkbox-group input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      checkbox.checked = false;  // Uncheck each checkbox
+    });
+  }
 
   render() {
     return html`
       <div class="container">
         <div class="sidebar">
 
-        <h3>Sorting</h3>
+          <h3>Sorting</h3>
+          <select @change="${e => this.updateSorting(e.target.value)}">
+            <option value="">None</option>
+            <option value="title">Title</option>
+          </select>
 
-
-        <select @change="${e => this.updateSorting(e.target.value)}">
-        <option value="">None</option>
-        <option value="title">Title</option>
-      </select>
           <h3>Filter by Tags</h3>
-          
-          <!-- Tag Filter -->
           <div class="checkbox-group">
             <label>
-              <input type="checkbox" value="Portfolio" @change="${this.updateFilter}"> Portfolio
+              <input type="checkbox" value="portfolio" @change="${this.updateFilter}"> Portfolio
             </label>
             <label>
-              <input type="checkbox" value="Course" @change="${this.updateFilter}"> Course
+              <input type="checkbox" value="course" @change="${this.updateFilter}"> Course
             </label>
             <label>
-              <input type="checkbox" value="Resume" @change="${this.updateFilter}"> Resume
+              <input type="checkbox" value="resume" @change="${this.updateFilter}"> Resume
             </label>
             <label>
-              <input type="checkbox" value="Blog" @change="${this.updateFilter}"> Blog
+              <input type="checkbox" value="blog" @change="${this.updateFilter}"> Blog
             </label>
             <label>
-              <input type="checkbox" value="Research Website" @change="${this.updateFilter}"> Research Website
+              <input type="checkbox" value="research website" @change="${this.updateFilter}"> Research Website
             </label>
           </div>
+
+          <!-- Reset Filters Button -->
+          <button @click="${this.resetFilters}" class="reset-button">Reset Filters</button>
+
+          <!-- Continue Button moved after reset filter -->
+          <button 
+            class="continue-button" 
+            @click="${this.continueWithSelection}" 
+            ?disabled="${!this.activeUseCase}">
+            Continue
+          </button>
+
         </div>
-
-        
-
 
         <div class="use-case-cards">
           ${this.filteredUseCases.map(useCase => html`
@@ -201,13 +212,6 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
           `)}
         </div>
       </div>
-
-      <button 
-        class="continue-button" 
-        @click="${this.continueWithSelection}" 
-        ?disabled="${!this.activeUseCase}">
-        Continue
-      </button>
     `;
   }
 

@@ -16,6 +16,16 @@ export class UseCaseCard extends DDDSuper(I18NMixin(LitElement)) {
   }
 
   static styles = css`
+
+:root {
+  color-scheme: light dark;
+}
+body {
+  color: light-dark(#333b3c, #efefec);
+  background-color: light-dark(#efedea, #223a2c);
+}
+
+
     .card {
       background-color: var(--ddd-theme-default-white);
       border: var(--ddd-border-lg) solid var(--ddd-theme-default-limestoneGray);
