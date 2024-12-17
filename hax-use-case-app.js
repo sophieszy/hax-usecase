@@ -39,13 +39,7 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
         return response.json(); // Parse the JSON response
       })
       .then(data => {
-        // Resolve the image URLs to be relative to the public directory for Vercel deployment
-        this.useCases = data.data.map(useCase => {
-          // Update the image URL to be compatible with Vercel's public directory structure
-          useCase.image = useCase.image ? `/lib/${useCase.image.split('/').pop()}` : '';
-
-          return useCase;
-        });
+        this.useCases = data.data;
 
         this.filteredUseCases = [...this.useCases]; // Initialize filtered use cases
       })
@@ -55,6 +49,7 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
         this.filteredUseCases = [];
       });
   }
+
 
 
   static styles = css`
