@@ -1,7 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { DDDSuper } from '@haxtheweb/d-d-d/d-d-d.js';
 import { I18NMixin } from '@haxtheweb/i18n-manager/lib/I18NMixin.js';
-import '@haxtheweb/simple-icon/simple-icon.js';
 import './use-case-card.js';  // Import the card component
 
 export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
@@ -48,73 +47,6 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
       });
   }
 
-
-
-
-
-  static styles = css`
-    .container {
-      display: flex;
-      align-items: flex-start; /* Align items to top */
-      gap: 20px;
-    }
-
-    .sidebar {
-      width: 300px;
-      height: 100vh; /* Sidebar takes full viewport height */
-      padding: 10px;
-      background-color: #f4f4f4;
-      border-radius: 8px;
-      flex-shrink: 0; /* Prevent sidebar from shrinking */
-      overflow-y: auto; /* Handle overflow */
-      display: flex;
-      flex-direction: column; /* Ensure items are stacked vertically */
-      justify-content: flex-start;
-    }
-
-    .use-case-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .continue-button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: var(--ddd-theme-default-link);
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .continue-button[disabled] {
-      background-color: #ccc;
-      cursor: not-allowed;
-    }
-
-    .checkbox-group {
-      display: flex;
-      flex-direction: column; /* Stack children vertically */
-      gap: 10px; 
-    }
-
-    .checkbox-group label {
-      display: block; /* Ensures each label occupies a full line */
-    }
-
-    .reset-button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: var(--ddd-theme-default-warning);
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-  `;
-
   // Handle filter changes
   updateFilter(e) {
     const { value, checked } = e.target;
@@ -159,11 +91,22 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
     });
   }
 
+  // Select a use case and toggle active state
+  selectUseCase(useCase) {
+    this.activeUseCase = (this.activeUseCase?.id === useCase.id) ? null : useCase;  // Toggle selection
+  }
+
+  // Continue with selected use case
+  continueWithSelection() {
+    if (this.activeUseCase) {
+      alert(`Selected Use Case: ${this.activeUseCase.name}`);
+    }
+  }
+
   render() {
     return html`
       <div class="container">
         <div class="sidebar">
-
           <h3>Sorting</h3>
           <select @change="${e => this.updateSorting(e.target.value)}">
             <option value="">None</option>
@@ -189,10 +132,9 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
             </label>
           </div>
 
-          <!-- Reset Filters Button -->
           <button @click="${this.resetFilters}" class="reset-button">Reset Filters</button>
 
-          <!-- Continue Button moved after reset filter -->
+          <!-- Continue Button -->
           <button 
             class="continue-button" 
             @click="${this.continueWithSelection}" 
@@ -209,7 +151,8 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
               .title="${useCase.name}"
               .description="${useCase.description}"
               .attributes="${useCase.attributes}"
-              .active="${this.activeUseCase?.id === useCase.id}"
+              .demoLink="${useCase.demoLink}"
+              .active="${this.activeUseCase?.id === useCase.id}" 
               @card-selected="${() => this.selectUseCase(useCase)}"
             ></use-case-card>
           `)}
@@ -218,15 +161,67 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
     `;
   }
 
-  selectUseCase(useCase) {
-    this.activeUseCase = (this.activeUseCase?.id === useCase.id) ? null : useCase;
-  }
-
-  continueWithSelection() {
-    if (this.activeUseCase) {
-      alert(`Selected Use Case: ${this.activeUseCase.name}`);
+  static styles = css`
+    .container {
+      display: flex;
+      align-items: flex-start; /* Align items to top */
+      gap: 20px;
     }
-  }
+
+    .sidebar {
+      width: 300px;
+      height: 100vh; /* Sidebar takes full viewport height */
+      padding: 10px;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      flex-shrink: 0; /* Prevent sidebar from shrinking */
+      overflow-y: auto; /* Handle overflow */
+      display: flex;
+      flex-direction: column; /* Ensure items are stacked vertically */
+      justify-content: flex-start;
+    }
+
+    .use-case-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .continue-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: var(--ddd-theme-default-link);
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .continue-button[disabled] {
+      background-color: var(--ddd-theme-default-limestoneGray);
+      cursor: not-allowed;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column; /* Stack children vertically */
+      gap: 10px; 
+    }
+
+    .checkbox-group label {
+      display: block; /* Ensures each label occupies a full line */
+    }
+
+    .reset-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: var(--ddd-theme-default-warning);
+      color: var(--ddd-theme-default-slateMaxLight);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  `;
 }
 
 customElements.define(HaxUseCaseApp.tag, HaxUseCaseApp);

@@ -15,9 +15,6 @@
       padding: 0;
     }
 
-    #demo {
-      margin: var(--ddd-spacing-2);
-    }
 
     hax-use-case-app {
       margin: var(--ddd-spacing-2);
@@ -86,13 +83,32 @@
 
     .merlin {
       margin: var(--ddd-spacing-2);
-      /* No margin, keeps it aligned with search bar */
     }
 
     .account {
       font-weight: bold;
       max-width: 100px;
       margin-right: var(--ddd-spacing-4);
+    }
+
+    .new-journey {
+      padding-top: var(--ddd-spacing-8);
+      padding-left: var(--ddd-spacing-4);
+      font-size: 70px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+      padding: var(--ddd-spacing-4);
+    }
+
+    .description {
+      text-align: right;
+      font-size: 32px;
     }
   </style>
 
@@ -115,14 +131,18 @@
         </div>
       </div>
 
-      <!-- Right section: Account name -->
       <div class="account">
         <span>Account Name</span>
       </div>
     </div>
 
-    <!-- Main content -->
     <div style="margin-top: 60px;">
+    </div>
+
+
+    <div class="container">
+      <div class="new-journey">New Journey</div>
+      <div class="description">Pick a Journey! <br> Choose anything from a blog to a portfolio!</div>
     </div>
 
     <hax-use-case-app></hax-use-case-app>
