@@ -38,15 +38,7 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
         return response.json();
       })
       .then(data => {
-        // Convert relative image paths to absolute URLs
-        this.useCases = data.data.map(useCase => {
-          return {
-            ...useCase,
-            image: useCase.image
-              ? new URL(useCase.image, import.meta.url).href
-              : '' // Resolve to an absolute URL
-          };
-        });
+        this.useCases = data.data;
         this.filteredUseCases = [...this.useCases];
       })
       .catch(error => {
@@ -55,6 +47,7 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
         this.filteredUseCases = [];
       });
   }
+
 
 
 
@@ -89,7 +82,7 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
     .continue-button {
       margin-top: 20px;
       padding: 10px 20px;
-      background-color: #007bff;
+      background-color: var(--ddd-theme-default-link);
       color: white;
       border: none;
       border-radius: 4px;
@@ -114,7 +107,7 @@ export class HaxUseCaseApp extends DDDSuper(I18NMixin(LitElement)) {
     .reset-button {
       margin-top: 20px;
       padding: 10px 20px;
-      background-color: #f44336;
+      background-color: var(--ddd-theme-default-warning);
       color: white;
       border: none;
       border-radius: 4px;

@@ -18,7 +18,7 @@ export class UseCaseCard extends DDDSuper(I18NMixin(LitElement)) {
   static styles = css`
 
 :root {
-  color-scheme: light dark;
+  color: light dark;
 }
 body {
   color: light-dark(#333b3c, #efefec);
@@ -26,33 +26,39 @@ body {
 }
 
 
-    .card {
-      background-color: var(--ddd-theme-default-white);
-      border: var(--ddd-border-lg) solid var(--ddd-theme-default-limestoneGray);
-      border-radius: 12px;
-      padding: 15px;
-      text-align: center;
-      width: 280px;
-      box-shadow: var(--ddd-boxShadow-xl);
-      cursor: pointer;
-      transition: border-color 0.3s ease, transform 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.card {
+  background-color: light-dark(var(--ddd-theme-default-white), var(--ddd-theme-default-darkGray));
+  border: 2px solid var(--ddd-theme-default-limestoneGray);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  width: 300px;
+  height: 400px; /* Fixed height for all cards */
+  box-shadow: var(--ddd-boxShadow-xl);
+  cursor: pointer;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
 
-    .active {
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ddd-boxShadow-lg);  /* Enhanced shadow effect */
+  border-color: var(--ddd-theme-default-darkGray);  /* Darker border on hover for visibility in both modes */
+}
+
+   .card.active {
       border-color: blue;
+      border: var(--ddd-border-xg) solid var(--ddd-theme-default-limestoneGray);
       box-shadow: var(--ddd-boxShadow-lg);
+      background-color: green;
     }
 
     img {
-      max-width: 100%;
-      height: auto;
+      width: 300px;
+      height: 200px;
       border-radius: 8px;
       margin: var(--ddd-spacing-2);
     }
@@ -126,7 +132,7 @@ simple-icon {
 
     button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: var(--ddd-theme-default-link);
   color: white;
   border: none;
   border-radius: 5px;
