@@ -6,11 +6,9 @@
             "name": "Personal Blog",
             "description": "Create a personal or professional blog with ease.",
             "tags": [
-                "blog",
-                "personal",
-                "writing"
+                "blog"
             ],
-            "image": "./images/blog.png",
+            "image": "/public/personal-blog.png",
             "dateAdded": 1633046400,
             "demoLink": "https://hax.cloud?use-case=PersonalBlog",
             "attributes": [
@@ -34,10 +32,9 @@
             "description": "Showcase academic or research projects professionally.",
             "tags": [
                 "research website",
-                "portfolio",
-                "academic"
+                "portfolio"
             ],
-            "image": "/research-project.png",
+            "image": "/public/research-project.png",
             "dateAdded": 1633046400,
             "demoLink": "https://hax.cloud?use-case=ResearchWebsite",
             "attributes": [
@@ -60,11 +57,9 @@
             "name": "Portfolio Site",
             "description": "Present your work in an elegant and professional way.",
             "tags": [
-                "portfolio",
-                "personal",
-                "design"
+                "portfolio"
             ],
-            "image": "./images/portfolio.png",
+            "image": "./public/portfolio-site.png",
             "dateAdded": 1633046400,
             "demoLink": "https://hax.cloud?use-case=PortfolioSite",
             "attributes": [
@@ -87,11 +82,9 @@
             "name": "Online Resume",
             "description": "Build an interactive and visually appealing resume.",
             "tags": [
-                "resume",
-                "professional",
-                "job applications"
+                "resume"
             ],
-            "image": "./images/resume.png",
+            "image": "./public/online-resume.png",
             "dateAdded": 1633046400,
             "demoLink": "https://hax.cloud?use-case=OnlineResume",
             "attributes": [
@@ -114,11 +107,9 @@
             "name": "Course Platform",
             "description": "Create and deliver engaging online courses.",
             "tags": [
-                "course",
-                "teaching",
-                "education"
+                "course"
             ],
-            "image": "./images/course.png",
+            "image": "./public/course-platform.png",
             "dateAdded": 1633046400,
             "demoLink": "https://hax.cloud?use-case=CoursePlatform",
             "attributes": [
@@ -141,11 +132,10 @@
             "name": "Team Collaboration Hub",
             "description": "Facilitate collaboration with a streamlined team workspace.",
             "tags": [
-                "collaboration",
-                "teamwork",
+                "blog",
                 "research website"
             ],
-            "image": "./images/team.png",
+            "image": "./public/team-collaboration-hub.png",
             "dateAdded": 1633046400,
             "demoLink": "https://hax.cloud?use-case=TeamCollaborationHub",
             "attributes": [
@@ -172,7 +162,7 @@
                 "portfolio",
                 "research website"
             ],
-            "image": "./images/cms.png",
+            "image": "./public/cms.png",
             "dateAdded": 1633046400,
             "demoLink": "https://hax.cloud?use-case=ContentManagementSystem",
             "attributes": [
@@ -195,11 +185,10 @@
             "name": "Event Promotion Page",
             "description": "Promote events with dynamic pages and invitations.",
             "tags": [
-                "events",
-                "portfolio",
-                "personal"
+                "resume",
+                "portfolio"
             ],
-            "image": "./images/event.png",
+            "image": "./public/event-page.png",
             "dateAdded": 1633046400,
             "demoLink": "https://hax.cloud?use-case=EventPromotionPage",
             "attributes": [
@@ -223,10 +212,9 @@
             "description": "Engage with audiences through an interactive forum.",
             "tags": [
                 "blog",
-                "discussion",
                 "course"
             ],
-            "image": "./images/forum.png",
+            "image": "./public/community-forum.png",
             "dateAdded": 1633046400,
             "demoLink": "https://hax.cloud?use-case=CommunityForum",
             "attributes": [
